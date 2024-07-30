@@ -1,0 +1,18 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="Arslonbek">
+        <!-- Rename firstName to first_name -->
+        <renameColumn tableName="person" oldColumnName="firstname" newColumnName="first_name" columnDataType="varchar(255)"/>
+
+        <!-- Rename lastName to last_name -->
+        <renameColumn tableName="person" oldColumnName="lastname" newColumnName="last_name" columnDataType="varchar(255)"/>
+
+        <!-- Rename age to birth_year and change type to int -->
+        <!--<renameColumn tableName="person" oldColumnName="age" newColumnName="tugulgan_kun" columnDataType="int"/>
+    --></changeSet>
+
+</databaseChangeLog>
